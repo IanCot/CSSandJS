@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap&subset=latin-ext');
+html,body {
+   margin:0px;
+   padding: 0px;
+   font-family: 'Nunito', sans-serif;
+   font-size: 14px;
+   display: grid;
+}
+section{
+    height: 75vh;
+    width: 100%;
+    background-color: chocolate;
+    margin:0px;
+   padding: 0px;
+   display: grid;
+   grid-template-columns: 1fr 1fr ;
+}
+.card-dialog-step-1{
+    border: 2px solid #ffffff;
+    max-width: 600px;
+    height: auto;
+    margin: 100px auto;
+    position: relative;
+    padding: 3em;
+    color:white;
+    box-sizing: border-box;
+}
+.card-double-step-1{
+    border: 2px solid #ffffff;
+    max-width: 600px;
+    height: auto;
+    margin: 100px auto;
+    position: relative;
+    padding: 3em;
+    color:white;
+    box-sizing: border-box;
+}
+.card-double-step-1::after,.card-double-step-1::before{
+    content:'';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
+.card-double-step-1::after{
+    left:50%;
+    top:100%;
+    border-bottom:  2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    border-left:  2px solid #ffffff;
+    border-right:  2px solid #ffffff; 
+}
+.card-double-step-1::before{
+    right: 50%;
+    top:100%;
+    background-color: orange;
+    border-bottom:  2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    border-left:  2px solid #ffffff;
+    border-right:  2px solid #ffffff; 
+}
+.card-dialog-step-1::after{
+    content: '';
+    position: absolute;
+    left:50%;
+    top:100%;
+    width:50px;
+    height: 50px;
+    background-color: red;
+    border-bottom:  2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    border-left:  2px solid #ffffff;
+    border-right:  2px solid #ffffff;
+}
+.card-dialog-step-2{
+    border: 2px solid #ffffff;
+    max-width: 600px;
+    height: auto;
+    margin: 100px auto;
+    position: relative;
+    padding: 3em;
+    color:white;
+    box-sizing: border-box;
+}
+.card-dialog-step-2::after{
+    content: '';
+    position: absolute;
+    left:50%;
+    top:100%;
+    width:50px;
+    height: 50px;
+    background-color: red;
+    transform: rotate(45deg);
+    border-bottom:  2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    border-left:  2px solid #ffffff;
+    border-right:  2px solid #ffffff;
+}
+.card-double-step-2{
+    border: 2px solid #ffffff;
+    max-width: 600px;
+    height: auto;
+    margin: 100px auto;
+    position: relative;
+    padding: 3em;
+    color:white;
+    box-sizing: border-box;
+}
+.card-double-step-2::after,.card-double-step-2::before{
+    content:'';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
+.card-double-step-2::after{
+    left:calc(50% + 25px);
+    top:100%;
+    transform: skew(15deg ,-30deg);
+    border-bottom:  2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    border-left:  2px solid #ffffff;
+    border-right:  2px solid #ffffff; 
+}
+.card-double-step-2::before{
+    left:calc(50% - 25px);
+    top:100%;
+    transform: skew(15deg ,30deg);
+    background-color: orange;
+    border-bottom:  2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    border-left:  2px solid #ffffff;
+    border-right:  2px solid #ffffff; 
+}
+.card-dialog-step-3{
+    border: 2px solid #ffffff;
+    max-width: 600px;
+    height: auto;
+    margin: 100px auto;
+    position: relative;
+    padding: 3em;
+    color:white;
+    box-sizing: border-box;
+}
+.card-dialog-step-3::after{
+    content: '';
+    position: absolute;
+    left:50%;
+    top:100%;
+    width:50px;
+    height: 50px;
+    background-color: red;
+    transform: rotate(45deg);
+    margin-top:-25px;
+    border-bottom:  2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    border-left:  2px solid #ffffff;
+    border-right:  2px solid #ffffff;
+}
+.card-double-step-3{
+    border: 2px solid #ffffff;
+    max-width: 600px;
+    height: auto;
+    margin: 100px auto;
+    position: relative;
+    padding: 3em;
+    color:white;
+    box-sizing: border-box;
+}
+.card-double-step-3::after,.card-double-step-3::before{
+    content:'';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    margin-top:-35px;
+}
+.card-double-step-3::after{
+    left:calc(50% + 25px);
+    top:100%;
+    transform: skew(15deg,-30deg);
+    border-bottom:  2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    border-left:  2px solid #ffffff;
+    border-right:  2px solid #ffffff; 
+}
+.card-double-step-3::before{
+    left:calc(50% - 25px);
+    top:100%;
+    transform: skew(15deg,30deg);
+    background-color: orange;
+    border-bottom:  2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    border-left:  2px solid #ffffff;
+    border-right:  2px solid #ffffff; 
+}
+.card-dialog{
+    border: 2px solid #ffffff;
+    max-width: 600px;
+    height: auto;
+    margin: 100px auto;
+    position: relative;
+    padding: 3em;
+    color:white;
+    box-sizing: border-box;
+}
+.card-dialog::after{
+    content: '';
+    position: absolute;
+    left:50%;
+    top:100%;
+    width:50px;
+    height: 50px;
+    background-color: chocolate;
+    transform: rotate(45deg);
+    margin-top:-25px;
+    border-bottom:  2px solid #ffffff;
+    border-top: 0px solid #ffffff;
+    border-left:  0px solid #ffffff;
+    border-right:  2px solid #ffffff;
+}
+.card-double{
+    border: 2px solid #ffffff;
+    max-width: 600px;
+    height: auto;
+    margin: 100px auto;
+    position: relative;
+    padding: 3em;
+    color:white;
+    box-sizing: border-box;
+}
+.card-double::after,.card-double::before{
+    content:'';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: chocolate;
+    margin-top:-35px;
+}
+.card-double::after{
+    left:calc(50% + 25px);
+    top:100%;
+    transform: skew(15deg ,-30deg);
+    border-bottom:  2px solid #ffffff;
+    border-top: 0px solid #ffffff;
+    border-left:  0px solid #ffffff;
+    border-right:  0px solid #ffffff; 
+}
+.card-double::before{
+    left:calc(50% - 25px);
+    top:100%;
+    transform: skew(15deg ,30deg);
+   
+    border-bottom:  2px solid #ffffff;
+    border-top: 0px solid #ffffff;
+    border-left:  0px solid #ffffff;
+    border-right:  0px solid #ffffff; 
+}
