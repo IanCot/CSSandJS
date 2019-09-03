@@ -1,0 +1,31 @@
+body{
+    margin: 3em;
+    padding: 0px;
+    display: grid;
+    grid-auto-rows: 200px;
+    grid-template-columns: repeat(auto-fit,minmax(150px,250px))
+}
+.box {
+    margin: 1em;
+    width: 150px;
+    height: 50px;
+    background: linear-gradient(to right, #4568dc, #b06ab3); 
+    display: grid;
+    place-items: center;
+}
+.turn10 {
+    transform: rotate(.1turn);
+  }
+.turn25{
+    transform: rotate(.25turn);
+}
+.turn5{
+    transform: rotate(.5turn);
+}
+.turn180{
+    transform: rotate(1turn);
+    transition: transform 1s;
+}
+.turn180:hover{
+    transform: rotate(4turn);
+}
