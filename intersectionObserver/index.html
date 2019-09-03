@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IntersectionObserver</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <section>
+
+    </section>
+    <section class="content">
+        <div class="left">
+            <img src="images/jas2.png" alt="jas2" class="jas anim" data-delay="0s"/>
+            <p class="anim" data-delay="0.5s">Lorem, ipsum dolor sit amet.</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" class="pool anim" data-delay="1s">
+                <path d="M44 42c-2.22 0-3.46-.74-4.36-1.29-.74-.44-1.19-.71-2.3-.71-1.11 0-1.56.27-2.3.71-.9.54-2.14 1.29-4.36 1.29s-3.46-.74-4.36-1.29c-.74-.45-1.19-.71-2.3-.71-1.11 0-1.56.27-2.3.71-.92.55-2.16 1.29-4.38 1.29-2.22 0-3.46-.74-4.36-1.28-.74-.45-1.19-.72-2.31-.72s-1.56.27-2.31.72C7.46 41.26 6.22 42 4 42v-4c1.11 0 1.56-.27 2.31-.72.9-.54 2.14-1.28 4.36-1.28s3.46.74 4.36 1.28c.74.45 1.19.72 2.31.72 1.11 0 1.56-.27 2.3-.71.9-.54 2.14-1.29 4.36-1.29s3.46.74 4.36 1.29c.74.45 1.19.71 2.3.71s1.56-.27 2.3-.71c.9-.54 2.14-1.29 4.36-1.29s3.46.74 4.36 1.29c.76.44 1.21.71 2.32.71v4zm0-9c-2.22 0-3.46-.74-4.36-1.29-.74-.44-1.19-.71-2.3-.71-1.11 0-1.56.27-2.3.71-.9.54-2.14 1.29-4.36 1.29s-3.46-.74-4.36-1.29c-.74-.45-1.19-.71-2.3-.71-1.11 0-1.56.27-2.3.71-.92.55-2.16 1.29-4.38 1.29-2.22 0-3.46-.74-4.36-1.28-.74-.45-1.19-.72-2.31-.72s-1.56.27-2.31.72C7.46 32.26 6.22 33 4 33v-4c1.11 0 1.56-.27 2.31-.72.9-.54 2.14-1.28 4.36-1.28s3.46.74 4.36 1.28c.74.45 1.19.72 2.31.72 1.11 0 1.56-.27 2.3-.71.9-.54 2.14-1.29 4.36-1.29s3.46.74 4.36 1.29c.74.45 1.19.71 2.3.71s1.56-.27 2.3-.71c.9-.54 2.14-1.29 4.36-1.29s3.46.74 4.36 1.29c.76.44 1.21.71 2.32.71v4zm-26.66-9c1.11 0 1.56-.27 2.3-.71.9-.54 2.14-1.29 4.36-1.29s3.46.74 4.36 1.29c.74.45 1.19.71 2.3.71s1.56-.27 2.3-.71c.24-.15.51-.3.81-.46L20.96 10C17.85 6.89 15 5.98 10 6v5c3.64-.02 5.77.78 8 3l2 2-6.5 6.5c.62.24 1.12.53 1.54.78.74.45 1.19.72 2.3.72z"/>
+                <circle cx="33" cy="11" r="5"/>
+            </svg>
+        </div>
+        <div class="right">
+            <div>
+                <h2>Lorem ipsum dolor sit amet.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eligendi necessitatibus odit rerum inventore illum fuga quos repellendus dignissimos. Debitis ab culpa maiores fuga recusandae.</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        const images = document.querySelectorAll('.anim');
+       let observer = new IntersectionObserver((entries) => {
+        console.log(entries);
+            entries.forEach(entry => {
+                if(entry.intersectionRatio > 0) {
+                    entry.target.style.animation = `anim1 2s ${entry.target.dataset.delay} forwards ease-out`
+                }
+                else {
+                    entry.target.style.animation = 'none'
+                }
+            })
+        })
+     images.forEach(image => {
+            observer.observe(image)
+        })
+    </script>
+</body>
+</html>
